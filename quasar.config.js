@@ -21,7 +21,7 @@ module.exports = configure(function (/* ctx */) {
     // boot: [],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
-    css: ['app.scss'],
+    css: ['../app/styles/index.scss'],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
@@ -51,16 +51,18 @@ module.exports = configure(function (/* ctx */) {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      // publicPath: '/',
+      publicPath: '',
       // analyze: true,
       // env: {},
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,
       // polyfillModulePreload: true,
-      // distDir
+      distDir: 'dist',
 
-      // extendViteConf (viteConf) {},
+      extendViteConf(viteConf) {
+        viteConf.base = '';
+      },
       // viteVuePluginOptions: {},
 
       vitePlugins: [

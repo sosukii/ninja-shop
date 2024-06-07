@@ -17,9 +17,13 @@ defineProps({
   padding: 16px;
   transition: 0.3s;
   &:hover {
-    background-color: #ff663326;
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+  }
+  &:active {
+    background-color: $akcentnyy-akcentnyy-2;
     border-color: #fff;
-    color: $akcentnyy-akcentnyy-2;
+    color: #fff;
   }
 }
 </style>
